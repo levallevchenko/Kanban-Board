@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.tsx',
   plugins: [
     new HtmlWebpackPlugin({
-        template: "index.html",
+        template: "public/index.html",
+        filename: "index.html",
         minify: {
             minifyCSS: true,
             minifyJS: true

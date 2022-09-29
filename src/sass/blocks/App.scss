@@ -1,0 +1,25 @@
+.app {
+	display: grid;
+	grid-template-columns: 80px 1fr;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas:
+      "header header"
+      "sidebar main";
+
+  &__main-header {
+    grid-area: header;
+		background-color: thistle;
+  }
+
+  &__sidebar {
+    grid-area: sidebar;
+		background-color: greenyellow;
+  }
+
+  &__main {
+    grid-area: main;
+		height: calc(100vh - 80px);
+    overflow-y: auto;
+		background-color: royalblue;
+  }
+}

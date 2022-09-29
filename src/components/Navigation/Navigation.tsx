@@ -1,6 +1,8 @@
-export default function Navigation() {
+const Navigation = () => {
 	return (
 		<>
 		</>
 	);
 }
+
+export default Navigation;

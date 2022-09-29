@@ -1,6 +1,8 @@
-export default function Logo() {
+const Logo = () => {
 	return (
 		<>
 		</>
 	);
 }
+
+export default Logo;

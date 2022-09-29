@@ -1,6 +1,8 @@
-export default function Board() {
+const BoardBreadcrums = () => {
 	return (
 		<>
 		</>
 	);
 }
+
+export default BoardBreadcrums;

@@ -1,6 +1,8 @@
-export default function Profile() {
+const Profile = () => {
 	return (
 		<>
 		</>
 	);
 }
+
+export default Profile;

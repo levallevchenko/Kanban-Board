@@ -1,6 +1,8 @@
-export default function Board() {
+const Board = () => {
 	return (
 		<>
 		</>
 	);
 }
+
+export default Board;

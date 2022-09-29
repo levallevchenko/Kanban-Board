@@ -2,7 +2,7 @@ import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import Profile from '../Profile/Profile';
 
-export default function Header() {
+const Header = () => {
 	return (
 		<>
 			<Logo />
@@ -11,3 +11,5 @@ export default function Header() {
 		</>
 	);
 }
+
+export default Header;

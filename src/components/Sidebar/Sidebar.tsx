@@ -1,6 +1,8 @@
-export default function Board() {
+const Sidebar = () => {
 	return (
 		<>
 		</>
 	);
 }
+
+export default Sidebar;

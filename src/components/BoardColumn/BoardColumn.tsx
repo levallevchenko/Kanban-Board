@@ -1,6 +1,8 @@
-export default function Board() {
+const BoardColumn = () => {
 	return (
 		<>
 		</>
 	);
 }
+
+export default BoardColumn;

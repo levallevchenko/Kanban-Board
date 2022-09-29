@@ -1,3 +1,4 @@
-body {
-    background-color: blueviolet;
-}
+@import "normalize.scss";
+@import "scaffolding.scss";
+@import "variables.scss";
+@import "mixins.scss";

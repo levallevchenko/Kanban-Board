@@ -1,0 +1,27 @@
+.profile {
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--color-common-white);
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		margin-right: 22px;
+		&--currency {
+			margin-left: 7px;
+		}
+	}
+	// &__notifications {
+		
+	// }
+	&__menu {
+		display: flex;
+		align-items: center;
+		margin-left: 40px;
+	}
+	&__name {
+		margin: 0 10px;
+	}
+}

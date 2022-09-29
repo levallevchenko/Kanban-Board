@@ -1,0 +1,15 @@
+.logo {
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	&__icon {
+		&:hover {
+			fill: #E96880;
+		}
+	}
+	&__name {
+		margin: 0;
+		margin-left: 8px;
+		color: var(--color-common-white);
+	}
+}

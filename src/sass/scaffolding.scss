@@ -35,3 +35,18 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -6,8 +6,9 @@ module.exports = merge(common, {
   mode: "development",
   devtool: "eval-cheap-module-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "public"),
     compress: true,
+    publicPath: '/',
     port: 9000
   }
 })

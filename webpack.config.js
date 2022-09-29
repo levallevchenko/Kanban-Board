@@ -40,7 +40,14 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
-        type: "asset"
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000
+            }
+          }
+        ]
       },
       {
         test: /\.(svg)$/i,
@@ -51,10 +58,12 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
   },
+  devtool: 'source-map',
   output: {
-    filename: "[name].bundle.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: 'assets/[hash][ext][query]',
+    publicPath: '/',
     clean: true
   }
 }

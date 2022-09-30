@@ -13,4 +13,15 @@
   &__item {
     grid-column: 1;
   }
+
+  &__add-task-button {
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding: 9px;
+    border-radius: 4px;
+    background-color: var(--color-blue-light);
+  }
 }

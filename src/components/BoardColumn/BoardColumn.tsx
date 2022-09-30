@@ -2,10 +2,14 @@ import classNames from "classnames";
 // @types
 import { BoardCardI, BoardColumnI } from "../../@types/board";
 import { ClassNameI } from "../../@types/project";
+// mocks
 import { boardCardsData } from "../../mocks/boardData";
-import BoardCard from "../BoardCard/BoardCard";
 // components
 import BoardColumnEditing from "../BoardColumnEditing/BoardColumnEditing";
+import BoardCard from "../BoardCard/BoardCard";
+import IconButton from "../IconButton/IconButton";
+// icons
+import IconAdditing from "../../icons/IconAdditing";
 
 type BoardColumnType = {
   column: BoardColumnI;
@@ -24,6 +28,12 @@ const BoardColumn: ClassNameI<BoardColumnType> = ({ className, column }) => {
           <BoardCard key={columnCard.id} className="board-column__item" card={columnCard} />
         )}
       </ul>
+      <IconButton
+        className="board-column__add-task-button"
+        icon={<IconAdditing color="var(--color-common-white)" />}
+        name="Добавить новую задачу"
+        handleClick={() => { }}
+      />
     </section>
   );
 }

@@ -34,7 +34,7 @@
   &__task-name {
     font-weight: 500;
     color: var(--color-blue);
-    transition: color 0.s ease-in-out;
+    transition: color 0.5s ease-in-out;
 
     &:hover {
       opacity: 75%;

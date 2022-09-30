@@ -1,0 +1,24 @@
+.breadcrumbs {
+	&__list {
+		@include reset-list;
+		display: flex;
+	}
+	&__item {
+		font-size: 16px;
+		line-height: 22px;
+		&--current {
+			margin: 0;
+		}
+		&--link {
+			color: var(--color-grey-breadcrumbs);
+			&::after {
+        content: "/";
+				margin: 0 5px;
+        color: var(--color-grey-breadcrumbs-slash)
+      }
+			&:hover {
+				color: var(--color-pink);
+			}
+		}
+	}
+}

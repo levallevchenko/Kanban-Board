@@ -1,0 +1,7 @@
+.board-column__add-button {
+	background-color: var(--color-blue-grey);
+	color: var(--color-grey-dark);
+	&:hover {
+		background-color: var(--color-blue-light);
+	}
+}

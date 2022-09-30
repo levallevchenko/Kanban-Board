@@ -1,4 +1,31 @@
 .main {
 	padding: 40px;
 	background-color: var(--color-bg-white);
+	color: var(--color-grey-dark);
+	&__page-header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	&__page-title {
+		font-size: 24px;
+		font-weight: 700;
+		margin: 0;
+		margin-right: 21px;
+	}
+	// &__breadcrumbs {
+		
+	// }
+	&__board-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0;
+		border-bottom: 1px solid var(--color-grey-board-header-divider);
+	}
+	&__board-title {
+		font-size: 16px;
+		font-weight: 500;
+		margin: 0;
+	}
 }

@@ -1,16 +1,25 @@
 import classNames from "classnames";
 // @types
-import { ClassNameInterface } from "../../@types/project";
-import { employeesData } from "../../mocks/employeesData";
+import { ClassNameI } from "../../@types/project";
+import { EmployeeI } from "../../@types/employee";
+// mocks
+import { avatarMediumSize } from "../../mocks/avatarData";
+// utils
+import { getSize } from "../../utils/common";
 // components
 import Avatar from "../Avatar/Avatar";
 
-const Executors: ClassNameInterface = ({ className }) => {
+type ExecutorsType = {
+  executors: EmployeeI[];
+};
+
+const Executors: ClassNameI<ExecutorsType> = ({ className, executors }) => {
+  const currentAvatarSize = getSize(avatarMediumSize);
   return (
     <ul className={classNames(className, 'executors')}>
-      {employeesData.map((employee) =>
+      {executors.map((employee) =>
         <li className="executors__item" key={employee.id}>
-          <Avatar employee={employee} />
+          <Avatar employee={employee} size={currentAvatarSize} />
         </li>
       )}
     </ul>

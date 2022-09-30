@@ -1,31 +1,10 @@
 .board {
-  color: var(--color-grey-dark);
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 40px;
+  overflow-x: auto;
 
-  &__page-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  &__page-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-    margin-right: 21px;
-  }
-
-  // &__breadcrumbs {
-
-  // }
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__title {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0;
+  &__column {
+    grid-row: 1;
   }
 }

@@ -1,18 +1,22 @@
 // mocks
-import { boardPageData } from "../../mocks/boardData";
+import { boardColumnsData, boardPageData } from "../../mocks/boardData";
 // components
 import BoardBreadcrumbs from "../BoardBreadcrumbs/BoardBreadcrumbs";
 import BoardCard from "../BoardCard/BoardCard";
-import BoardColumnAddButton from "../BoardColumnAddButton/BoardColumnAddButton";
+import BoardColumn from "../BoardColumn/BoardColumn";
 
 const Board = () => {
-	const { breadcrumbs, title, projectTitle } = boardPageData;
-
-	return (
-		<section className="board">
-			<BoardCard />
-		</section>
-	);
+  return (
+    <section className="board">
+      {boardColumnsData.map(
+        (column) => <BoardColumn
+          key={column.id}
+          className="board__column"
+          column={column}
+        />
+      )}
+    </section>
+  );
 }
 
 export default Board;

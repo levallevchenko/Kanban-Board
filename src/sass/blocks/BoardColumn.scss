@@ -1,0 +1,16 @@
+.board-column {
+  &__editing {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    @include reset-list;
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 16px;
+  }
+
+  &__item {
+    grid-column: 1;
+  }
+}

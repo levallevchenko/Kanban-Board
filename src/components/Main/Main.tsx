@@ -1,16 +1,16 @@
 import classNames from "classnames";
 // @types
-import { ClassNameInterface } from "../../@types/project";
+import { ClassNameI } from "../../@types/project";
 // mocks
 import { boardPageData } from "../../mocks/boardData";
 // components
 import Board from "../Board/Board";
 import BoardBreadcrumbs from "../BoardBreadcrumbs/BoardBreadcrumbs";
-import BoardColumnAddButton from "../BoardColumnAddButton/BoardColumnAddButton";
+import BoardColumnAddButton from "../BoardColumnAdditingButton/BoardColumnAdditingButton";
 
-const Main: ClassNameInterface = ({className}) => {
+const Main: ClassNameI = ({ className }) => {
 	const { breadcrumbs, title, projectTitle } = boardPageData;
-	
+
 	return (
 		<main className={classNames(className, 'main')}>
 			<div className="main__page-header">

@@ -1,0 +1,17 @@
+.board-column-editing {
+  display: flex;
+  justify-content: space-between;
+
+  &__label {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+
+  &__button-list {
+    @include reset-list;
+    display: flex;
+  }
+
+  &__button-item {}
+}

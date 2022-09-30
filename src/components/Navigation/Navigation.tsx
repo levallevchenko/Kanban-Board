@@ -1,8 +1,8 @@
-import { ClassNameInterface } from "../../@types/project";
+import { ClassNameI } from "../../@types/project";
 // mocks
 import { navListData } from "../../mocks/navListData";
 
-const Navigation: ClassNameInterface = () => {
+const Navigation: ClassNameI = () => {
 	return (
 		<nav className="main-nav" >
 			<ul className="main-nav__list">

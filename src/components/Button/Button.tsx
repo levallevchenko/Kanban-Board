@@ -1,18 +1,18 @@
 import classNames from "classnames";
 // @types
-import { ClassNameInterface } from "../../@types/project";
+import { ClassNameI } from "../../@types/project";
 
 type ButtonProps = {
 	name: string;
 	handleClick: () => void;
 };
 
-const Button: ClassNameInterface<ButtonProps> = 
+const Button: ClassNameI<ButtonProps> =
 	(
 		{ className, name, handleClick }
 	) => {
 		return (
-			<button 
+			<button
 				className={classNames(className, 'button')}
 				onClick={handleClick}
 			>

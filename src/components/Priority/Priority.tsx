@@ -1,9 +1,9 @@
 import classNames from "classnames";
 
 // @types
-import { ClassNameInterface } from "../../@types/project";
+import { ClassNameI } from "../../@types/project";
 
-const Priority: ClassNameInterface = ({ className }) => {
+const Priority: ClassNameI = ({ className }) => {
 	return (
 		<div className={classNames(className, 'priority')}></div>
 	)

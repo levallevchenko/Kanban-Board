@@ -1,0 +1,39 @@
+.board-card {
+  display: flex;
+  justify-content: space-between;
+  min-height: 118px;
+  border-radius: 4px;
+  background-color: var(--color-grey-light);
+  position: relative;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: green;
+    max-width: 64px;
+    padding: 14px 16px;
+    background-color: var(--color-grey);
+  }
+
+  // &__executors {}
+
+  &__priority {
+    height: 14px;
+  }
+
+  &__description {
+    font-size: 13px;
+    flex-grow: 1;
+    padding: 15px 12px;
+  }
+
+  &__task-id {
+    margin: 0;
+  }
+
+  &__task-name {
+    font-weight: 500;
+    color: var(--color-blue);
+  }
+}

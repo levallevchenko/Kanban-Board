@@ -1,0 +1,9 @@
+.executors {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+
+  &__item:not(:last-child) {
+    max-height: 20px;
+  }
+}

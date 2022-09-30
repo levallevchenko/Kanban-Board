@@ -1,19 +1,30 @@
 import classNames from "classnames";
-import { Employee } from "../../@types/employee";
+import { EmployeeI } from "../../@types/employee";
 
 // @types
-import { ClassNameInterface } from "../../@types/project";
+import { ClassNameI } from "../../@types/project";
 
 type AvatarProps = {
-	employee: Employee;
+  employee: EmployeeI;
+  size: {
+    width: string;
+    height: string;
+  }
 };
 
-const Avatar: ClassNameInterface<AvatarProps> = ({ className, employee }) => {
-	const { avatar } = employee;
+const Avatar: ClassNameI<AvatarProps> = ({ className, employee, size }) => {
+  const { avatar } = employee;
+  const { width, height } = size;
 
-	return (
-		<img className={classNames(className, 'avatar')} src={avatar}  alt="Фото вашего профиля"/>
-	)
+  return (
+    <img
+      className={classNames(className, 'avatar')}
+      src={avatar}
+      alt="Фото вашего профиля"
+      width={width}
+      height={height}
+    />
+  )
 }
 
 export default Avatar;

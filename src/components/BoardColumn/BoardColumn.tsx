@@ -23,7 +23,12 @@ const BoardColumn: ClassNameI<BoardColumnType> = ({ className, column }) => {
   return (
     <section className={classNames(className, 'board-column')}>
       <BoardColumnEditing className="board-column__editing" column={column} />
-      <ul className="board-column__list">
+      <ul className="board-column__list"
+        onDragOver={(evt) => { console.log('dragover'); evt.preventDefault(); }}
+        onDragEnter={() => console.log('dragenter')}
+        onDragLeave={() => console.log('dragleave')}
+        onDrop={(evt) => { console.log('drop', evt.target) }}
+      >
         {columnCards.map((columnCard) =>
           <BoardCard key={columnCard.id} className="board-column__item" card={columnCard} />
         )}

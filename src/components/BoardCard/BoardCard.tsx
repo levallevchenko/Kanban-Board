@@ -16,7 +16,12 @@ const BoardCard: ClassNameI<BoardCardType> = ({ className, card }) => {
   const cardId = id.split('#')[1];
 
   return (
-    <li className={classNames(className, 'board-card')}>
+    <li
+      className={classNames(className, 'board-card')}
+      onDragStart={() => console.log('dragstart')}
+      onDragEnd={() => console.log('dragend')}
+      draggable="true"
+    >
       <div className="board-card__info">
         <Executors className="board-card__executors" executors={executors} />
         <Priority className="board-card__priority" />

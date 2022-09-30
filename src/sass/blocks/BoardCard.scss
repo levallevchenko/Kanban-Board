@@ -34,5 +34,14 @@
   &__task-name {
     font-weight: 500;
     color: var(--color-blue);
+    transition: color 0.s ease-in-out;
+
+    &:hover {
+      opacity: 75%;
+    }
+
+    &:active {
+      opacity: 55%;
+    }
   }
 }

@@ -4,9 +4,9 @@ import classNames from "classnames";
 import { ClassNameI } from "../../@types/project";
 
 const Priority: ClassNameI = ({ className }) => {
-	return (
-		<div className={classNames(className, 'priority')}></div>
-	)
+  return (
+    <div className={classNames(className, 'priority')}></div>
+  )
 }
 
 export default Priority;

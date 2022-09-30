@@ -1,0 +1,15 @@
+.icon-button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+
+  path {
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &:hover {
+    path {
+      fill: var(--color-pink);
+    }
+  }
+}

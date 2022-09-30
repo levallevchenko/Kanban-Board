@@ -1,4 +1,5 @@
 .main {
+  z-index: 1;
   padding: 40px;
   background-color: var(--color-bg-white);
   color: var(--color-grey-dark);
@@ -19,18 +20,20 @@
   // &__breadcrumbs {
 
   // }
+
   &__board-header {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     margin-bottom: 24px;
-    border-bottom: 1px solid var(--color-grey-board-header-divider);
+    border-bottom: 1px solid var(--color-grey-divider);
   }
 
   &__board-title {
     font-size: 16px;
     font-weight: 500;
     margin: 0;
+    margin-left: 8px;
   }
 }

@@ -1,21 +1,26 @@
 .main-nav {
-	font-size: 16px;
-	font-weight: 500;
-	&__list {
-		@include reset-list;
-		display: grid;
-		grid-auto-flow: column;
+  font-size: 16px;
+  font-weight: 500;
+
+  &__list {
+    @include reset-list;
+    display: grid;
+    grid-auto-flow: column;
     gap: 32px;
-	}
-	&__link {
-		color: var(--color-grey-link);
-		transition: all 0.2s ease-in-out;
-		&--active {
-			color: var(--color-common-white);
-		}
-		&:hover, &--active {
-			color: var(--color-common-white);
-			border-bottom: 2px solid var(--color-pink);
-		}
-	}
+  }
+
+  &__link {
+    color: var(--color-grey-nav);
+    transition: all 0.2s ease-in-out;
+
+    &--active {
+      color: var(--color-common-white);
+    }
+
+    &:hover,
+    &--active {
+      color: var(--color-common-white);
+      border-bottom: 2px solid var(--color-pink);
+    }
+  }
 }

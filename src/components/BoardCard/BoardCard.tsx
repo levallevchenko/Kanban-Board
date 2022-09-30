@@ -15,8 +15,6 @@ const BoardCard: ClassNameI<BoardCardType> = ({ className, card }) => {
 
   const cardId = id.split('#')[1];
 
-  console.log(cardId);
-
   return (
     <li className={classNames(className, 'board-card')}>
       <div className="board-card__info">
@@ -26,9 +24,9 @@ const BoardCard: ClassNameI<BoardCardType> = ({ className, card }) => {
       <div className="board-card__description">
         <p className="board-card__task-id">
           #{cardId}: {' '}
-          <span className="board-card__task-name">
+          <a className="board-card__task-name" href="#">
             {name}
-          </span>
+          </a>
         </p>
       </div>
     </li>

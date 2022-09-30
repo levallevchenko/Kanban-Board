@@ -1,5 +1,6 @@
 // @types
 import { ClassNameI } from "../../@types/project";
+import IconBell from "../../icons/IconBell";
 // mocks
 import { avatarMediumSize } from "../../mocks/avatarData";
 import { employeesData } from "../../mocks/employeesData";
@@ -7,6 +8,7 @@ import { employeesData } from "../../mocks/employeesData";
 import { getSize } from "../../utils/common";
 // components
 import Avatar from "../Avatar/Avatar";
+import IconButton from "../IconButton/IconButton";
 
 const Profile: ClassNameI = () => {
   const currentUser = employeesData[0];
@@ -20,7 +22,12 @@ const Profile: ClassNameI = () => {
           <span className="profile__info--currency">₽</span>
         </p>
       </div>
-      <img className="profile__notifications" src="./icons/ic_bell.svg" />
+      <IconButton
+        className="profile__notification"
+        name="Посмотреть уведомления"
+        icon={<IconBell color="var(--color-grey-nav)" />}
+        handleClick={() => { }}
+      />
       <a className="profile__menu">
         <Avatar employee={currentUser} size={currentAvatarSize} />
         <p className="profile__name">Назир</p>

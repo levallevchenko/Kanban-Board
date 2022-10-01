@@ -31,7 +31,7 @@ const Profile: ClassNameI = () => {
       <a className="profile__menu">
         <Avatar employee={currentUser} size={currentAvatarSize} />
         <p className="profile__name">Назир</p>
-        <img src="./icons/ic_chevron_down.svg" />
+        <img src="./img/ic_chevron_down.svg" />
       </a>
     </div>
   );

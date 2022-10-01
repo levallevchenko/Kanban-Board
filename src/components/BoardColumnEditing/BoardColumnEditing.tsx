@@ -23,7 +23,7 @@ const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, col
   return (
     <div className={cn(className, 'board-column-editing')}>
       <div className="board-column-editing__column-title">
-        <img src={`./icons/${columnIconName}.svg`} alt="" />
+        <img src={`./img/${columnIconName}.svg`} alt="" />
         <label className="board-column-editing__label" htmlFor={key}>{title}</label>
         <input className="board-column-editing__input visually-hidden" type="text" id={key} name={key} />
       </div>

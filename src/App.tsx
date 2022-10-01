@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div className="app">
       <Header className="app__main-header" />
-			<Sidebar className="app__sidebar" />
-			<Main className="app__main" />
+      <Sidebar className="app__sidebar" />
+      <Main className="app__main" />
     </div>
   );
 };

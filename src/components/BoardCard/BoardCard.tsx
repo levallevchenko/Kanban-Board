@@ -12,13 +12,17 @@ type BoardCardType = {
 
 const BoardCard: ClassNameI<BoardCardType> = ({ className, card }) => {
   const { id, name, executors } = card;
-
   const cardId = id.split('#')[1];
+
+  const handleDragStart = (evt: React.DragEvent<HTMLLIElement>, id: string) => {
+    console.log('dragstart:', id);
+    evt?.dataTransfer?.setData("id", id);
+  };
 
   return (
     <li
       className={classNames(className, 'board-card')}
-      onDragStart={() => console.log('dragstart')}
+      onDragStart={(evt) => handleDragStart(evt, id)}
       onDragEnd={() => console.log('dragend')}
       draggable="true"
     >

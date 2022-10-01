@@ -12,6 +12,11 @@
 
   &__item {
     grid-column: 1;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
   }
 
   &__add-task-button {

@@ -10,9 +10,10 @@ import IconTrash from "../../icons/IconTrash";
 
 type BoardColumnEditingType = {
   column: BoardColumnI;
+  handleDelete: () => void;
 }
 
-const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, column }) => {
+const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, column, handleDelete }) => {
   const { id, key, title, icon } = column;
 
   return (
@@ -23,7 +24,7 @@ const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, col
         <li className="board-column-editing__button-item">
           <IconButton
             icon={<IconEdit color="var(--color-grey-dark)" />}
-            name="Редактировать название статуса"
+            name="Редактировать название колонки"
             handleClick={() => { }}
           />
         </li>
@@ -31,7 +32,7 @@ const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, col
           <IconButton
             icon={<IconTrash color="var(--color-grey-dark)" />}
             name="Удалить колонку"
-            handleClick={() => { }}
+            handleClick={handleDelete}
           />
         </li>
       </ul>

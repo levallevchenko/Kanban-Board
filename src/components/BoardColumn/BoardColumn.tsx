@@ -15,12 +15,13 @@ import IconAdditing from "../../icons/IconAdditing";
 type BoardColumnType = {
   column: BoardColumnI;
   columnCards: BoardCardI[];
+  handleDelete: (columnId: string) => void;
   handleDrop: (evt: React.DragEvent<HTMLElement>, columnType: string) => void;
 }
 
-const BoardColumn: ClassNameI<BoardColumnType> = ({ className, column, columnCards, handleDrop }) => {
+const BoardColumn: ClassNameI<BoardColumnType> = ({ className, column, columnCards, handleDelete, handleDrop }) => {
   const [isDragNDrop, setIsDragNDrop] = useState(false);
-  const { key } = column;
+  const { id, key } = column;
 
   return (
     <section
@@ -33,7 +34,11 @@ const BoardColumn: ClassNameI<BoardColumnType> = ({ className, column, columnCar
       {/* {isDragNDrop && <div style={{ width: '100%', height: '100%' }}></div>} */}
       {
         <>
-          <BoardColumnEditing className="board-column__editing" column={column} />
+          <BoardColumnEditing
+            className="board-column__editing"
+            column={column}
+            handleDelete={() => handleDelete(id)}
+          />
           <ul className="board-column__list">
             {columnCards.map((columnCard) =>
               <BoardCard key={columnCard.id} className="board-column__item" card={columnCard} />

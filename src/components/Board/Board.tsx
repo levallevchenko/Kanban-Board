@@ -1,10 +1,16 @@
-// mocks
 import { useState } from "react";
-import IconWave from "../../icons/IconWave";
-import { boardCardsData, boardColumnsData, boardPageData, emptyColumnData } from "../../mocks/boardData";
+// mocks
+import {
+  boardCardsData,
+  boardColumnsData,
+  boardPageData,
+  getEmptyColumnData
+} from "../../mocks/boardData";
 // components
 import BoardColumn from "../BoardColumn/BoardColumn";
 import Button from "../Button/Button";
+// icons
+import IconWave from "../../icons/IconWave";
 
 const Board = () => {
   const { projectTitle } = boardPageData;
@@ -12,8 +18,14 @@ const Board = () => {
   const [cards, setCards] = useState(boardCardsData);
 
   const handleAddColumnClick = () => {
-    setColumns([...columns, emptyColumnData]);
-    console.log('add-column')
+    setColumns([...columns, getEmptyColumnData()]);
+  };
+
+  const handleDeleteColumnClick = (columnId: string) => {
+    setColumns((prevColumns) =>
+      prevColumns.filter((column) => column.id !== columnId));
+    console.log(columnId);
+
   };
 
   const handleDrop = (evt: React.DragEvent<HTMLElement>, columnType: string) => {
@@ -46,6 +58,7 @@ const Board = () => {
             className="board__column"
             column={column}
             columnCards={cards.filter((cardData) => cardData.status === column.key)}
+            handleDelete={handleDeleteColumnClick}
             handleDrop={handleDrop}
           />
         )}

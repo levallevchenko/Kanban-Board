@@ -37,12 +37,12 @@ export const boardColumnsData: BoardColumnI[] = [
   }
 ];
 
-export const emptyColumnData: BoardColumnI = {
-  id: uuidv4(),
-  key: 'new',
+export const getEmptyColumnData = (): BoardColumnI => ({
+  id: uuidv4() + '' + (+new Date()),
+  key: 'new-' + (+new Date()),
   title: 'Новая',
   icon: ''
-};
+});
 
 export const boardCardsData: BoardCardI[] = [
   {

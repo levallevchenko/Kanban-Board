@@ -36,5 +36,9 @@
         fill: var(--color-common-white);
       }
     }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 }

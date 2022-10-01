@@ -30,6 +30,10 @@
       &:hover {
         color: var(--color-pink);
       }
+
+      &:active {
+        opacity: 0.7;
+      }
     }
   }
 }

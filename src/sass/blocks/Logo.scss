@@ -1,15 +1,25 @@
 .logo {
-	display: flex;
-	align-items: center;
-	width: fit-content;
-	&__icon {
-		&:hover {
-			fill: #E96880;
-		}
-	}
-	&__name {
-		margin: 0;
-		margin-left: 8px;
-		color: var(--color-common-white);
-	}
+  display: flex;
+  align-items: center;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &__icon {
+    &:hover {
+      fill: #E96880;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-left: 8px;
+    color: var(--color-common-white);
+  }
 }

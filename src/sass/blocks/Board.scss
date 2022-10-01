@@ -35,4 +35,12 @@
   &__column {
     grid-row: 1;
   }
+
+  &__empty-board {
+    font-size: 48px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

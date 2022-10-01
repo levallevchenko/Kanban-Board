@@ -24,8 +24,6 @@ const Board = () => {
   const handleDeleteColumnClick = (columnId: string) => {
     setColumns((prevColumns) =>
       prevColumns.filter((column) => column.id !== columnId));
-    console.log(columnId);
-
   };
 
   const handleDrop = (evt: React.DragEvent<HTMLElement>, columnType: string) => {
@@ -52,7 +50,13 @@ const Board = () => {
         />
       </div>
       <section className="board__main">
-        {columns.map(
+        {!columns[0] &&
+          <div className="board__empty-board">
+            <p>Доска пуста</p>
+            <img src="./img/no-data.svg" alt="Закрытый трак" width="40%" height="40%" />
+          </div>
+        }
+        {columns && columns.map(
           (column) => <BoardColumn
             key={column.id}
             className="board__column"

@@ -17,23 +17,5 @@
     margin-right: 21px;
   }
 
-  // &__breadcrumbs {
-
-  // }
-
-  &__board-header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    margin-bottom: 24px;
-    border-bottom: 1px solid var(--color-grey-divider);
-  }
-
-  &__board-title {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0;
-    margin-left: 8px;
-  }
+  // &__breadcrumbs {}
 }

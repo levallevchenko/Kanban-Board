@@ -37,6 +37,13 @@ export const boardColumnsData: BoardColumnI[] = [
   }
 ];
 
+export const emptyColumnData: BoardColumnI = {
+  id: uuidv4(),
+  key: 'new',
+  title: 'Новая',
+  icon: ''
+};
+
 export const boardCardsData: BoardCardI[] = [
   {
     id: `${uuidv4()}-#20409`,

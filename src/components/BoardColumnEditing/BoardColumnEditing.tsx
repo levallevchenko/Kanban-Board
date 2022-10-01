@@ -16,10 +16,30 @@ type BoardColumnEditingType = {
 const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, column, handleDelete }) => {
   const { id, key, title, icon } = column;
 
+  const getColumnIconName = (columnType: string) => {
+    switch (key) {
+      case 'backlog':
+        return 'ic_paperclip';
+      case 'in-progress':
+        return 'ic_play_button'
+      case 'done':
+        return 'ic_check';
+      case 'delivered':
+        return 'ic_check';
+      default:
+        return 'ic_paperclip';
+    }
+  }
+
+  const columnIconName = getColumnIconName(key);
+
   return (
     <div className={classNames(className, 'board-column-editing')}>
-      <label className="board-column-editing__label" htmlFor={key}>{title}</label>
-      <input className="board-column-editing__input visually-hidden" type="text" id={key} name={key} />
+      <div className="board-column-editing__column-title">
+        <img src={`./icons/${columnIconName}.svg`} alt="" />
+        <label className="board-column-editing__label" htmlFor={key}>{title}</label>
+        <input className="board-column-editing__input visually-hidden" type="text" id={key} name={key} />
+      </div>
       <ul className="board-column-editing__button-list">
         <li className="board-column-editing__button-item">
           <IconButton

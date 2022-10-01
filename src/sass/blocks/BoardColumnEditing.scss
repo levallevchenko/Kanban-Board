@@ -2,10 +2,16 @@
   display: flex;
   justify-content: space-between;
 
+  &__column-title {
+    display: flex;
+    align-items: center;
+  }
+
   &__label {
     font-size: 14px;
     line-height: 22px;
     font-weight: 500;
+    margin-left: 8px;
   }
 
   &__button-list {

@@ -17,7 +17,8 @@
   &__button-list {
     @include reset-list;
     display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 40px;
   }
-
-  &__button-item {}
 }

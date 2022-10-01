@@ -11,7 +11,7 @@ export interface BoardCardI {
   id: string,
   name: string,
   executors: EmployeeI[],
-  priotity: number,
+  priority: number,
   status: string,
   isDone: boolean,
 };

@@ -2,9 +2,10 @@
   display: flex;
   border: none;
   background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 
   path {
-    transition: fill 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover {

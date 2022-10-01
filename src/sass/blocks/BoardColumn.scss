@@ -27,6 +27,14 @@
     margin-top: 16px;
     padding: 9px;
     border-radius: 4px;
-    background-color: var(--color-blue-light);
+    background-color: var(--color-grey-add-card-button);
+
+    &:hover {
+      background-color: var(--color-blue-light);
+
+      path {
+        fill: var(--color-common-white);
+      }
+    }
   }
 }

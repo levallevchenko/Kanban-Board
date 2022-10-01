@@ -13,17 +13,23 @@ type AvatarProps = {
 };
 
 const Avatar: ClassNameI<AvatarProps> = ({ className, employee, size }) => {
-  const { avatar } = employee;
+  const { avatar, name } = employee;
+  const { basic, retina, webp } = avatar;
   const { width, height } = size;
 
   return (
-    <img
-      className={classNames(className, 'avatar')}
-      src={avatar}
-      alt="Фото вашего профиля"
-      width={width}
-      height={height}
-    />
+    <picture>
+      <source type="image/webp" srcSet={webp} />
+      <source srcSet={`${basic} 1x, ${retina} 2x`} />
+      <img
+        className={classNames(className, 'avatar')}
+        src={basic}
+        srcSet={`${retina} 2x`}
+        alt={`${name} (аватар)`}
+        width={width}
+        height={height} />
+    </picture>
+
   )
 }
 

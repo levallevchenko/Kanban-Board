@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "classnames";
 import { EmployeeI } from "../../@types/employee";
 
 // @types
@@ -22,7 +22,7 @@ const Avatar: ClassNameI<AvatarProps> = ({ className, employee, size }) => {
       <source type="image/webp" srcSet={webp} />
       <source srcSet={`${basic} 1x, ${retina} 2x`} />
       <img
-        className={classNames(className, 'avatar')}
+        className={cn(className, 'avatar')}
         src={basic}
         srcSet={`${retina} 2x`}
         alt={`${name} (аватар)`}

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "classnames";
 // @types
 import { BoardColumnI } from "../../@types/board";
 import { ClassNameI } from "../../@types/project";
@@ -34,7 +34,7 @@ const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, col
   const columnIconName = getColumnIconName(key);
 
   return (
-    <div className={classNames(className, 'board-column-editing')}>
+    <div className={cn(className, 'board-column-editing')}>
       <div className="board-column-editing__column-title">
         <img src={`./icons/${columnIconName}.svg`} alt="" />
         <label className="board-column-editing__label" htmlFor={key}>{title}</label>

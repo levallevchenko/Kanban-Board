@@ -1,5 +1,5 @@
 import { useState } from "react";
-import classNames from "classnames";
+import cn from "classnames";
 // @types
 import { BoardCardI, BoardColumnI } from "../../@types/board";
 import { ClassNameI } from "../../@types/project";
@@ -25,7 +25,7 @@ const BoardColumn: ClassNameI<BoardColumnType> = ({ className, column, columnCar
 
   return (
     <section
-      className={classNames(className, 'board-column')}
+      className={cn(className, 'board-column')}
       onDragOver={(evt) => { console.log('dragover'); setIsDragNDrop(true); evt.preventDefault(); }}
       onDragEnter={() => console.log('dragenter')}
       onDragLeave={() => console.log('dragleave')}

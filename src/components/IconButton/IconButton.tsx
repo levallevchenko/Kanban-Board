@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import classNames from "classnames";
+import cn from "classnames";
 // @types
 import { ClassNameI } from "../../@types/project";
 
@@ -15,7 +15,7 @@ const IconButton: ClassNameI<IconButtonProps> =
   ) => {
     return (
       <button
-        className={classNames(className, 'icon-button')}
+        className={cn(className, 'icon-button')}
         onClick={handleClick}
       >
         <span className="visually-hidden">{name}</span>

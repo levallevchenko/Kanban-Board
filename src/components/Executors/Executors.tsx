@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "classnames";
 // @types
 import { ClassNameI } from "../../@types/project";
 import { EmployeeI } from "../../@types/employee";
@@ -16,7 +16,7 @@ type ExecutorsType = {
 const Executors: ClassNameI<ExecutorsType> = ({ className, executors }) => {
   const currentAvatarSize = getSize(avatarMediumSize);
   return (
-    <ul className={classNames(className, 'executors')}>
+    <ul className={cn(className, 'executors')}>
       {executors.map((employee) =>
         <li className="executors__item" key={employee.id}>
           <Avatar employee={employee} size={currentAvatarSize} />

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "classnames";
 // @types
 import { ClassNameI } from "../../@types/project";
 // icons
@@ -12,7 +12,7 @@ const BoardBreadcrumbs: ClassNameI<BoardBreadcrumbsProps> = ({ className, breadc
   const lastBreadcrumbIndex = breadcrumbs.length - 1;
 
   return (
-    <div className={classNames(className, 'breadcrumbs')}>
+    <div className={cn(className, 'breadcrumbs')}>
       <nav className="breadcrumbs__nav">
         <IconPlayButton color="var(--color-pink)" />
         <ul className="breadcrumbs__list">

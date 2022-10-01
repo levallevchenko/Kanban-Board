@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 // @types
 import { ClassNameI } from '../../@types/project';
 // components
@@ -6,9 +6,9 @@ import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import Profile from '../Profile/Profile';
 
-const Header: ClassNameI = ({className}) => {
+const Header: ClassNameI = ({ className }) => {
 	return (
-		<header className={classNames(className, 'main-header')}>
+		<header className={cn(className, 'main-header')}>
 			<Logo />
 			<Navigation />
 			<Profile />

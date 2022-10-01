@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "classnames";
 // @types
 import { ClassNameI } from "../../@types/project";
 
@@ -13,12 +13,12 @@ const Button: ClassNameI<ButtonProps> =
 	) => {
 		return (
 			<button
-				className={classNames(className, 'button')}
+				className={cn(className, 'button')}
 				onClick={handleClick}
 			>
 				{name}
 			</button>
 		);
-}
+	}
 
 export default Button;

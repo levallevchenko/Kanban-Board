@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "classnames";
 import { BoardCardI } from "../../@types/board";
 // @types
 import { ClassNameI } from "../../@types/project";
@@ -22,7 +22,7 @@ const BoardCard: ClassNameI<BoardCardType> = ({ className, card }) => {
 
   return (
     <li
-      className={classNames(className, 'board-card')}
+      className={cn(className, 'board-card')}
       onDragStart={(evt) => handleDragStart(evt, id)}
       onDragEnd={() => console.log('dragend')}
       draggable="true"

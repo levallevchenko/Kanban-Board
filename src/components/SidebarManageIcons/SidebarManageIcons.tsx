@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "classnames";
 
 // @types
 import { ClassNameI } from "../../@types/project";

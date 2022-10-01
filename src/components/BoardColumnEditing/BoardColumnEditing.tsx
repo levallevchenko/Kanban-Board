@@ -7,6 +7,8 @@ import IconButton from "../IconButton/IconButton";
 // icons
 import IconEdit from "../../icons/IconEdit";
 import IconTrash from "../../icons/IconTrash";
+// utils
+import { getColumnIconName } from "../../utils/board";
 
 type BoardColumnEditingType = {
   column: BoardColumnI;
@@ -15,21 +17,6 @@ type BoardColumnEditingType = {
 
 const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, column, handleDelete }) => {
   const { id, key, title, icon } = column;
-
-  const getColumnIconName = (columnType: string) => {
-    switch (key) {
-      case 'backlog':
-        return 'ic_paperclip';
-      case 'in-progress':
-        return 'ic_play_button'
-      case 'done':
-        return 'ic_check';
-      case 'delivered':
-        return 'ic_check';
-      default:
-        return 'ic_paperclip';
-    }
-  }
 
   const columnIconName = getColumnIconName(key);
 

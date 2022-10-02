@@ -19,17 +19,42 @@ type BoardColumnType = {
   handleDrop: (evt: React.DragEvent<HTMLElement>, columnType: string) => void;
 }
 
-const BoardColumn: ClassNameI<BoardColumnType> = ({ className, column, columnCards, handleDelete, handleDrop }) => {
-  const [isDragNDrop, setIsDragNDrop] = useState(false);
+const BoardColumn: ClassNameI<BoardColumnType> = ({
+  className,
+  column,
+  columnCards,
+  handleDelete,
+  handleDrop
+}) => {
   const { id, key } = column;
+
+  const dragHandler = (evt: any, evtType: string) => {
+    evtType === 'dragover' && evt.preventDefault();
+    evtType === 'dragdrop' && handleDrop(evt, key);
+
+    const target = evt.currentTarget as Element;
+    console.log(evtType, target);
+    if (target.tagName === 'SECTION') {
+      switch (evtType) {
+        case 'dragover':
+        case 'dragenter':
+          target.classList.add('board-column--dragenter');
+          break;
+        case 'dragleave':
+        case 'dragdrop':
+          target.classList.remove('board-column--dragenter');
+          break;
+      }
+    }
+  }
 
   return (
     <section
       className={cn(className, 'board-column')}
-      onDragOver={(evt) => { console.log('dragover'); setIsDragNDrop(true); evt.preventDefault(); }}
-      onDragEnter={() => console.log('dragenter')}
-      onDragLeave={() => console.log('dragleave')}
-      onDrop={(evt) => { handleDrop(evt, key); setIsDragNDrop(false) }}
+      onDragOver={(evt) => dragHandler(evt, 'dragover')}
+      onDragEnter={(evt) => dragHandler(evt, 'dragenter')}
+      onDragLeave={(evt) => dragHandler(evt, 'dragleave')}
+      onDrop={(evt) => dragHandler(evt, 'dragdrop')}
     >
       {/* {isDragNDrop && <div style={{ width: '100%', height: '100%' }}></div>} */}
       {

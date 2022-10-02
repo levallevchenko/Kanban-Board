@@ -1,4 +1,8 @@
 .board-column {
+  &--dragenter {
+    opacity: 0.5;
+  }
+
   &__editing {
     margin-bottom: 10px;
   }

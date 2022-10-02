@@ -32,6 +32,7 @@ const Board = () => {
     const newCards = cards.filter((card) => {
       if (card.id === id) {
         card.status = columnType;
+        card.isDone = columnType === 'done';
       }
       return card;
     });

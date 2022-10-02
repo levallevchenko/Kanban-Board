@@ -1,11 +1,11 @@
 ---
 plugins:
-- prettier
-- "@typescript-eslint"
+  - prettier
+  - "@typescript-eslint"
 extends:
-- airbnb-typescript
-- react-app
-- prettier
+  - airbnb-typescript
+  - react-app
+  - prettier
 parser: "@typescript-eslint/parser"
 parserOptions:
   project: "./tsconfig.json"
@@ -44,17 +44,16 @@ rules:
   jsx-a11y/control-has-associated-label: 0
   import/no-extraneous-dependencies: 0
   object-curly-spacing:
-  - 1
-  - always
+    - 1
+    - always
   "@typescript-eslint/no-unused-vars":
-  - 1
-  - vars: all
-    args: none
+    - 1
+    - vars: all
+      args: none
   prettier/prettier:
-  - 2
-  - printWidth: 100
-    singleQuote: true
-    trailingComma: none
-    tabWidth: 2
-    endOfLine: auto
-
+    - 2
+    - printWidth: 100
+      singleQuote: true
+      trailingComma: none
+      tabWidth: 2
+      endOfLine: auto

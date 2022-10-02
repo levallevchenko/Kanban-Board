@@ -33,6 +33,11 @@
 
   &__task-id {
     margin: 0;
+
+    &--done {
+      opacity: 49.97%;
+      text-decoration: line-through;
+    }
   }
 
   &__task-name {

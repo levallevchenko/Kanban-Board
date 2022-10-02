@@ -12,7 +12,7 @@ type BoardCardType = {
 };
 
 const BoardCard: ClassNameI<BoardCardType> = ({ className, card }) => {
-  const { id, name, executors, priority } = card;
+  const { id, name, executors, priority, isDone } = card;
   const cardId = id.split('#')[1];
 
   const handleDragStart = (evt: React.DragEvent<HTMLLIElement>, id: string) => {
@@ -32,7 +32,7 @@ const BoardCard: ClassNameI<BoardCardType> = ({ className, card }) => {
         <IconPriority className="board-card__priority" priority={priority} />
       </div>
       <div className="board-card__description">
-        <p className="board-card__task-id">
+        <p className={cn('board-card__task-id', { 'board-card__task-id--done': isDone })}>
           #{cardId}: {' '}
           <a className="board-card__task-name" href="#">
             {name}

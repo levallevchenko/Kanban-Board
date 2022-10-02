@@ -33,7 +33,7 @@ const BoardColumn: ClassNameI<BoardColumnType> = ({
     evtType === 'dragdrop' && handleDrop(evt, key);
 
     const target = evt.currentTarget as Element;
-    console.log(evtType, target);
+
     if (target.tagName === 'SECTION') {
       switch (evtType) {
         case 'dragover':

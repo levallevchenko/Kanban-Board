@@ -1,4 +1,6 @@
 .board-column {
+  min-width: 170px;
+
   &--dragenter {
     opacity: 0.5;
   }

@@ -16,14 +16,14 @@ type BoardColumnEditingType = {
 }
 
 const BoardColumnEditing: ClassNameI<BoardColumnEditingType> = ({ className, column, handleDelete }) => {
-  const { id, key, title, icon } = column;
+  const { key, title } = column;
 
   const columnIconName = getColumnIconName(key);
 
   return (
     <div className={cn(className, 'board-column-editing')}>
       <div className="board-column-editing__column-title">
-        <img src={`./img/${columnIconName}.svg`} alt="" />
+        <img src={`./img/${ columnIconName }.svg`} alt="" />
         <label className="board-column-editing__label" htmlFor={key}>{title}</label>
         <input className="board-column-editing__input visually-hidden" type="text" id={key} name={key} />
       </div>
